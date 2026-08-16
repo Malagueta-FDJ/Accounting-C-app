@@ -1,19 +1,31 @@
 #include <iostream>
 #include <string>
+
 class Value{
-    double Size;            //Size of value
-    std::string Account;    //Account: bank_1, bank_2, ... 
-    std::string Pay_Method; //PIX, TED, Boleto, ...
-    std::string Receiver;   //money receiver
-    std::string Payer;      //money payer
+    float Size;                 //Size of value, Modulus
+    long int Receiver_Id;       //Account_Id from the receiver
+    long int Payer_Id;          //Account_Id from the payer
+    std::string Pay_Method;     //PIX, TED, Boleto, ...
 public:
-    Value() = default;
+    Value(
+        float modulus,
+        unsigned long int IdRec, 
+        unsigned long int IdPay,
+        std::string Method);
     ~Value() = default;
 
-    void set_size(){};
-    void get_size(){};
-    void set_Account(){};
-    void get_Account(){};
+//setters:
+    void set_size(float modulus){};
+    void set_Reciever_Id(unsigned long int Id){};
+    void set_Payer_Id(unsigned long int Id){};
+    void set_Pay_Method(std::string Method){};
+
+//getters:
+    double get_size(){};
+    unsigned long int get_Reciever_Id(){};
+    unsigned long int get_Payer_Id(){};
+    std::string get_Pay_Method(){};
+    
 };
 
 class Spent : public Value{
