@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "values.h"
+#include "Values.h"
 
 Value::Value(
         float modulus,
@@ -34,10 +34,8 @@ Value::set_Pay_Method(std::string method){
     Pay_Method = method;
 };
 
-
-
 //getters
-double
+float
 Value::get_size(){
     return Size;
 };

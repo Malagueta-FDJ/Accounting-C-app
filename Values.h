@@ -15,16 +15,16 @@ public:
     ~Value() = default;
 
 //setters:
-    void set_size(float modulus){};
-    void set_Reciever_Id(unsigned long int Id){};
-    void set_Payer_Id(unsigned long int Id){};
-    void set_Pay_Method(std::string Method){};
+    void set_size(float modulus);
+    void set_Reciever_Id(unsigned long int Id);
+    void set_Payer_Id(unsigned long int Id);
+    void set_Pay_Method(std::string Method);
 
 //getters:
-    double get_size(){};
-    unsigned long int get_Reciever_Id(){};
-    unsigned long int get_Payer_Id(){};
-    std::string get_Pay_Method(){};
+    float get_size();
+    unsigned long int get_Reciever_Id();
+    unsigned long int get_Payer_Id();
+    std::string get_Pay_Method();
     
 };
 
